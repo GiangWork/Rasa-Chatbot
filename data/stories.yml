@@ -1,0 +1,28 @@
+version: "3.1"
+
+stories:
+
+- story: search product by name
+  steps:
+  - intent: search_product_by_name
+  - action: action_search_product
+
+- story: search product by category
+  steps:
+  - intent: search_product_by_category
+  - action: action_search_product
+
+- story: search product by supplier
+  steps:
+  - intent: search_product_by_supplier
+  - action: action_search_product
+
+- story: search product by price range
+  steps:
+  - intent: search_product_by_price_range
+  - action: action_search_product
+
+- story: recommend product
+  steps:
+  - intent: recommend_product
+  - action: action_search_product

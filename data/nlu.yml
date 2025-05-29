@@ -1,0 +1,38 @@
+version: "3.1"
+
+nlu:
+
+- intent: search_product_by_name
+  examples: |
+    - Tôi muốn mua [cà rốt](product_name)
+    - Có bán [nấm hương](product_name) không?
+    - Bạn có [phân trùn quế](product_name) không?
+    - Tôi cần tìm [táo fuji](product_name)
+
+- intent: search_product_by_category
+  examples: |
+    - Có những loại [rau củ](category) nào?
+    - Cho tôi xem sản phẩm [trái cây](category)
+    - Tôi quan tâm tới [đồ khô](category)
+    - Có bán [phân bón](category) không?
+
+- intent: search_product_by_supplier
+  examples: |
+    - Có hàng của [HTX Rau Sạch Tây Bắc](supplier) không?gơi
+    - Tôi muốn xem sản phẩm từ [Trang trại A](supplier)
+    - Có sản phẩm nào của [HTX Đồng Tâm](supplier) không?
+
+- intent: search_product_by_price_range
+  examples: |
+    - có sản phẩm nào giá từ [100](price_from) đến [200](price_to) ngàn không
+    - sản phẩm nào giá tầm [150](price_from) nghìn
+    - em có khoảng [300](price_to) nghìn, có mua được gì không
+    - có gì dưới [200](price_to) ngàn không
+    - sản phẩm giá khoảng [250](price_from) nghìn
+
+- intent: recommend_product
+  examples: |
+    - Gợi ý giúp tôi vài sản phẩm [rau củ](category)
+    - Nên mua gì trong [trái cây](category) hôm nay?
+    - Có gợi ý gì không?
+    - Tư vấn cho tôi sản phẩm nào đó đi

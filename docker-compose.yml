@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  rasa:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5005:5005"
+    depends_on:
+      - action_server
+    volumes:
+      - ./models:/app/models
+      - ./actions:/app/actions
+      - ./config.yml:/app/config.yml
+      - ./domain.yml:/app/domain.yml
+      - ./data:/app/data
+      - ./endpoints.yml:/app/endpoints.yml
+
+  action_server:
+    build:
+      context: .
+      dockerfile: Dockerfile.actions
+    ports:
+      - "5055:5055"
+    volumes:
+      - ./actions:/app/actions
+    environment:
+      - PRODUCT_API_URL=https://host.docker.internal:7268/api/product/product

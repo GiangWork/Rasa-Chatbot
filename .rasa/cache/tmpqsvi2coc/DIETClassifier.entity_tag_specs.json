@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-category",
+      "2": "I-category",
+      "3": "L-category",
+      "4": "U-category",
+      "5": "B-price_from",
+      "6": "I-price_from",
+      "7": "L-price_from",
+      "8": "U-price_from",
+      "9": "B-price_to",
+      "10": "I-price_to",
+      "11": "L-price_to",
+      "12": "U-price_to",
+      "13": "B-product_name",
+      "14": "I-product_name",
+      "15": "L-product_name",
+      "16": "U-product_name",
+      "17": "B-supplier",
+      "18": "I-supplier",
+      "19": "L-supplier",
+      "20": "U-supplier",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-category": 1,
+      "I-category": 2,
+      "L-category": 3,
+      "U-category": 4,
+      "B-price_from": 5,
+      "I-price_from": 6,
+      "L-price_from": 7,
+      "U-price_from": 8,
+      "B-price_to": 9,
+      "I-price_to": 10,
+      "L-price_to": 11,
+      "U-price_to": 12,
+      "B-product_name": 13,
+      "I-product_name": 14,
+      "L-product_name": 15,
+      "U-product_name": 16,
+      "B-supplier": 17,
+      "I-supplier": 18,
+      "L-supplier": 19,
+      "U-supplier": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

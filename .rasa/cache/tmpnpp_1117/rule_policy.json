@@ -1,0 +1,22 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search_product_by_name\"}}]": "action_search_product",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search_product_by_name\"}}, {\"prev_action\": {\"action_name\": \"action_search_product\"}, \"user\": {\"intent\": \"search_product_by_name\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search_product_by_supplier\"}}]": "action_search_product",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search_product_by_supplier\"}}, {\"prev_action\": {\"action_name\": \"action_search_product\"}, \"user\": {\"intent\": \"search_product_by_supplier\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search_product_by_category\"}}]": "action_search_product",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search_product_by_category\"}}, {\"prev_action\": {\"action_name\": \"action_search_product\"}, \"user\": {\"intent\": \"search_product_by_category\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"recommend_product\"}}]": "action_search_product",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"recommend_product\"}}, {\"prev_action\": {\"action_name\": \"action_search_product\"}, \"user\": {\"intent\": \"recommend_product\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent restart",
+      "predicting default action with intent session_start",
+      "predicting default action with intent back"
+    ]
+  }
+}

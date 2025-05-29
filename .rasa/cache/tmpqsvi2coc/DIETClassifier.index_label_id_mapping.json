@@ -1,0 +1,7 @@
+{
+  "0": "recommend_product",
+  "1": "search_product_by_category",
+  "2": "search_product_by_name",
+  "3": "search_product_by_price_range",
+  "4": "search_product_by_supplier"
+}

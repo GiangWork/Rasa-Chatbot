@@ -1,0 +1,28 @@
+version: "3.1"
+
+rules:
+
+- rule: Gợi ý sản phẩm theo tên, loại, nhà cung cấp và gợi ý bất kỳ
+  steps:
+    - intent: search_product_by_name
+    - action: action_search_product
+
+- rule: Tìm theo loại
+  steps:
+    - intent: search_product_by_category
+    - action: action_search_product
+
+- rule: Tìm theo nhà cung cấp
+  steps:
+    - intent: search_product_by_supplier
+    - action: action_search_product
+
+- rule: Tìm theo giá sản phẩm
+  steps:
+    - intent: search_product_by_price_range
+    - action: action_search_product
+
+- rule: Gợi ý bất kỳ
+  steps:
+    - intent: recommend_product
+    - action: action_search_product
