@@ -16,6 +16,8 @@ RUN pip install --no-cache-dir -r /app/actions/actions_requirements.txt
 # Trở lại user mặc định của rasa-sdk
 USER 1001
 
+EXPOSE 5055
+
 ENTRYPOINT []
 
 CMD ["python", "-m", "rasa_sdk", "--actions", "actions"]
