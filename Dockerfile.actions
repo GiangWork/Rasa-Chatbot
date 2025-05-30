@@ -7,11 +7,8 @@ WORKDIR /app
 COPY ./actions /app/actions
 COPY ./actions/actions_requirements.txt /app/actions/actions_requirements.txt
 
-# Cài cập nhật pip
-RUN pip install --upgrade pip
-
-# Cài dependencies với quyền root
-RUN pip install --no-cache-dir -r /app/actions/actions_requirements.txt
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r /app/actions/actions_requirements.txt
 
 # Trở lại user mặc định của rasa-sdk
 USER 1001

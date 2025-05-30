@@ -24,27 +24,17 @@ USER root
 WORKDIR /app
 
 # Copy các file cấu hình của Rasa
-COPY models /app/models
+COPY models/20250520-151432-greasy-croissant.tar.gz /app/models/
 COPY config.yml /app/config.yml
 COPY domain.yml /app/domain.yml
 COPY data /app/data
 COPY endpoints.yml /app/endpoints.yml
 
-# Copy action và các yêu cầu cho custom action
-COPY ./actions /app/actions
-COPY ./actions/actions_requirements.txt /app/actions/actions_requirements.txt
-
-# Cài đặt pip và các dependencies cho custom action
-RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r /app/actions/actions_requirements.txt
-
-# Trở lại user mặc định của Rasa SDK
-USER 1001
-
-# Expose cổng cho Rasa và Action Server
-EXPOSE 5005 5055
+# Expose cổng cho Rasa
+EXPOSE 5005
 
 ENTRYPOINT []
 
 # Khởi động cả Rasa API và Action Server cùng lúc
-CMD rasa run --enable-api --cors '*' --model models/20250520-151432-greasy-croissant.tar.gz & python -m rasa_sdk --actions actions
+CMD ["sh", "-c", "rasa run --enable-api --cors '*' --port ${PORT:-5005} --model 20250520-151432-greasy-croissant.tar.gz"]
+
