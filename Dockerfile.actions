@@ -20,4 +20,4 @@ EXPOSE 5055
 
 ENTRYPOINT []
 
-CMD ["python", "-m", "rasa_sdk", "--actions", "actions"]
+CMD ["python", "-m", "rasa_sdk", "--actions", "actions", "--debug"]

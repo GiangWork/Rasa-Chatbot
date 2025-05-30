@@ -10,4 +10,4 @@ COPY endpoints.yml /app/endpoints.yml
 
 EXPOSE 5005
 
-CMD ["run", "--enable-api", "--cors", "*", "--model", "models/20250520-151432-greasy-croissant.tar.gz"]
+CMD ["run", "--enable-api", "--cors", "*", "--model", "models/20250520-151432-greasy-croissant.tar.gz", "--debug"]
