@@ -1,3 +1,7 @@
 requests
 urllib3
 python-dotenv
+keras==2.10.0
+tensorflow==2.10.0
+rasa==3.6.21
+sqlalchemy<2.0
