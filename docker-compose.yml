@@ -26,4 +26,4 @@ services:
     volumes:
       - ./actions:/app/actions
     environment:
-      - PRODUCT_API_URL=https://host.docker.internal:7268/api/product/product
+      - PRODUCT_API_URL=https://gianghappy-001-site1.mtempurl.com/api/product/product
